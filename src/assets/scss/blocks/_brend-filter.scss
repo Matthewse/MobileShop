@@ -1,0 +1,22 @@
+.brend-filter__list {
+   display: flex;
+   justify-content: space-around;
+}
+
+.brend-filter__item:first-child {
+   width: 60px;
+   height: 60px;
+   text-align: center;
+   align-items: center;
+
+   span {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 10px 0 10px 10px;
+      font-size: 30px;
+   }
+}
+
+.brend-filter__item {
+   cursor: pointer;
+}
