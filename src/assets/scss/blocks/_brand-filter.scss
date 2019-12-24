@@ -1,9 +1,9 @@
-.brend-filter__list {
+.brand-filter__list {
    display: flex;
    justify-content: space-around;
 }
 
-.brend-filter__item:first-child {
+.brand-filter__item:first-child {
    width: 60px;
    height: 60px;
    text-align: center;
@@ -17,6 +17,12 @@
    }
 }
 
-.brend-filter__item {
+.brand-filter__item {
    cursor: pointer;
+   
+   a {
+      display: block;
+      width: 100%;
+      height: 100%;
+   }
 }

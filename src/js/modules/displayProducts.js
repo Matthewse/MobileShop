@@ -1,8 +1,13 @@
 import search from "./search";
+import filter from "./filter";
 
 const displayProducts = (products) => {
    const productsList = document.querySelector('.products__list');
    const searchInput = document.querySelector('.search');
+   const companies = document.querySelectorAll('.brend-filter__company');
+
+   let term = '';
+   let brand = 'All';
 
    const showProducts = (products) => {
       let result = '';
@@ -22,9 +27,17 @@ const displayProducts = (products) => {
    showProducts(products);
 
    searchInput.addEventListener('keyup', e => {
-      const term = e.target.value.trim();
-      const visibleProducts = search(products, term);
-      showProducts(visibleProducts);
+      term = e.target.value.trim();
+      const searchProducts = filter(search(products, term), brand);
+      showProducts(searchProducts);
+   });
+
+   companies.forEach(company => {
+      company.addEventListener('click', () => {
+         brand = company.dataset.company;
+         const filterProducts = search(filter(products, brand), term);
+         showProducts(filterProducts);
+      });
    });
 }
 
