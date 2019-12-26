@@ -1,4 +1,4 @@
-const filter = (products, company = false) => {
+const filter = (products, company) => {
    if (company === 'All') {
       return products;
    }
