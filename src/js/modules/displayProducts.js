@@ -10,6 +10,7 @@ const displayProducts = (products) => {
                <h3 class="products__title">${product.title}</h3>
                <p class="products__price">${product.price} $</p>
             </div>
+            <button class="button__btn button__btn--products-buy" data-id=${product.id}>Buy</button>
          </li>
          `
       productsList.innerHTML = result;

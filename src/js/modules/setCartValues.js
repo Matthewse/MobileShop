@@ -1,4 +1,7 @@
-const setCartValues = (cart, cartTotal, cartItems) => {
+const setCartValues = (cart) => {
+   const cartTotal = document.querySelector('.cart__total');
+   const cartItems = document.querySelector('.cart-button__items');
+
    let tempTotal = 0;
    let itemsTotal = 0;
 

@@ -7,7 +7,11 @@ const addCartItem = product => {
          <h3 class="cart__title">${product.title}</h3>
          <div>
             <p class="cart__price">${product.price} $</p>
-            <p class="cart__item-amount">0</p>
+            <ul class="cart__amount">
+               <li><p class="cart__item-minus">-</p></li>
+               <li><p class="cart__item-amount">0</p></li>
+               <li><p class="cart__item-plus">+</p></li>
+            </ul>
          </div>
          <span class="cart__remove-item">X</span>
       </li>

@@ -1,6 +1,6 @@
 [
    {
-      "id": 1,
+      "id": "1",
       "title": "Galaxy Note 10+",
       "img": "img/note10.png",
       "price": 1099,
@@ -8,7 +8,7 @@
       "info": "An all-day battery that intelligently powers every scroll, click, call, tap, playlist and season finale you can throw at it. With nearly invisible bezels, Galaxy Note10+'s cinema-quality display elevates everything you watch."
    },
    {
-      "id": 2,
+      "id": "2",
       "title": "Huawei FreeBuds 3",
       "img": "img/freebuds3.png",
       "price": 199,
@@ -16,7 +16,7 @@
       "info": "More than an epic to listen to, the all new HUAWEI FreeBuds 3 is amazing to look at. Inspired by nature, the symmetrically round charging case is a feast for the eyes, and compact to hold or keep in the pocket, bag or anywhere."
    },
    {
-      "id": 3,
+      "id": "3",
       "title": "Xiaomi Mi True Wireless",
       "img": "img/airdots.png",
       "price": 59,
@@ -24,7 +24,7 @@
       "info": "Mi True Wireless Earphones use a completely wire-free design that unbinds left from right, creating an all new, completely liberated experience when you listen.As small as these earphones are, they pack a sound you'll have to hear to believe."
    },
    {
-      "id": 4,
+      "id": "4",
       "title": "Galaxy Watch",
       "img": "img/galaxywatch.png",
       "price": 349,
@@ -32,7 +32,7 @@
       "info": "Balance mind and body with sleep cycle tracking, reminders to keep moving, calorie tracking, guided meditation and breathing exercises for stress management."
    },
    {
-      "id": 5,
+      "id": "5",
       "title": "Xiaomi Mi 9T Pro",
       "img": "img/mi9tpro.png",
       "price": 299,
@@ -40,7 +40,7 @@
       "info": "Show off your skills with the Snapdragon 855 processor. CPU single-core performance is improved by 45%, game speed is accelerated by 25% and AI performance is tripled. This is the speed you need."
    },
    {
-      "id": 6,
+      "id": "6",
       "title": "iPhone 11",
       "img": "img/iphone11.png",
       "price": 799,
@@ -48,7 +48,7 @@
       "info": "A new dual‑camera system captures more of what you see and love. The fastest chip ever in a smartphone and all‑day battery life let you do more and charge less. And the highest‑quality video in a smartphone, so your memories look better than ever."
    },
    {
-      "id": 7,
+      "id": "7",
       "title": "Xiaomi Mi Note 10",
       "img": "img/minote10.png",
       "price": 699,
@@ -56,7 +56,7 @@
       "info": "Mi Note 10 employs all-new, ultra-flat screen unlocking technology and further optimizes the unlocking experience in bright light, with dry fingers and at low temperatures. Not only is the unlocking button sensitivity heightened, but the success rate has also increased."
    },
    {
-      "id": 8,
+      "id": "8",
       "title": "Galaxy Fold",
       "img": "img/fold.png",
       "price": 1980,
@@ -64,7 +64,7 @@
       "info": "Unfold to the most expansive Infinity Display ever. Create and collaborate with three apps on one screen."
    },
    {
-      "id": 9,
+      "id": "9",
       "title": "Huawei MediaPad M5 Pro",
       "img": "img/mediapad.png",
       "price": 399,
@@ -72,7 +72,7 @@
       "info": "The specially designed new Huawei M-Pen is an extension of your imagination. It's light and comfortable, and flows naturally on the display just like on a piece of paper. When inspiration grabs you, grab Huawei M-Pen."
    },
    {
-      "id": 10,
+      "id": "10",
       "title": "Microsoft Surface Pro 7",
       "img": "img/surfacepro7.png",
       "price": 1099,
@@ -80,7 +80,7 @@
       "info": "The 12.3' touchscreen 2-in-1 laptop that’s ultra-light and versatile — Surface Pro 7 is your endlessly adaptable partner now with faster processing and more connections — plus all-day battery life."
    },
    {
-      "id": 11,
+      "id": "11",
       "title": "Apple Watch Series 5",
       "img": "img/applewatch.png",
       "price": 499,
@@ -88,7 +88,7 @@
       "info": "With the new Always-On Retina display, you always see the time and your watch face."
    },
    {
-      "id": 12,
+      "id": "12",
       "title": "Huawei Mate 30 Pro",
       "img": "img/mate30pro.png",
       "price": 999,
@@ -96,7 +96,7 @@
       "info": "The breakthrough of visual boundaries, the exploration of photography and videography, the liberation of power and speed, and the innovation of interaction are now ready to be discovered. Embrace the future with new possibilities."
    },
    {
-      "id": 13,
+      "id": "13",
       "title": "Google Pixel Buds",
       "img": "img/pixelbuds.png",
       "price": 199,
@@ -104,7 +104,7 @@
       "info": "Rich audio, clear calls, and hands‑free help from the Google Assistant."
    },
    {
-      "id": 14,
+      "id": "14",
       "title": "Galaxy Tab S5e",
       "img": "img/tabs5e.png",
       "price": 479,
@@ -112,7 +112,7 @@
       "info": "Watch your favorite shows and movies come to life on a corner-to-corner 10.5' Super AMOLED display."
    },
    {
-      "id": 15,
+      "id": "15",
       "title": "iPhone 11 Pro",
       "img": "img/iphone11pro.png",
       "price": 999,
@@ -120,7 +120,7 @@
       "info": "A transformative triple‑camera system that adds tons of capability without complexity. An unprecedented leap in battery life. And a mind‑blowing chip that doubles down on machine learning and pushes the boundaries of what a smartphone can do."
    },
    {
-      "id": 16,
+      "id": "16",
       "title": "Huawei P30 Pro",
       "img": "img/p30pro.png",
       "price": 999,
@@ -128,7 +128,7 @@
       "info": "Zoom in to explore the mystery of the celestial at night, watch an eagle hovering over trees or examine the delicate details of crystal. Capture the best things in the moment and create your vision for the future. The HUAWEI P30 Pro is accentuating a new peak of smartphone photography."
    },
    {
-      "id": 17,
+      "id": "17",
       "title": "Galaxy Buds",
       "img": "img/galaxybuds.png",
       "price": 349,
@@ -136,7 +136,7 @@
       "info": "Pair Samsung Galaxy Buds with your phone or tablet and go. Listen and chat during the day, then wirelessly recharge for 15 minutes to get up to 1.7 more hours of play time."
    },
    {
-      "id": 18,
+      "id": "18",
       "title": "Huawei Watch GT 2",
       "img": "img/huaweiwatch.png",
       "price": 249,
@@ -144,7 +144,7 @@
       "info": "Huawei Watch GT series is always exploring the limits of smart watch battery life. With HUAWEI's self-developed wearable chip Kirin A1, the dual-chip design and intelligent power saving technology, it serves you day and night for up to 2 weeks."
    },
    {
-      "id": 19,
+      "id": "19",
       "title": "iPad Pro",
       "img": "img/ipad.png",
       "price": 999,
@@ -152,7 +152,7 @@
       "info": "Whatever you love to do, on iPad you can do it in ways that are incredibly simple and magical. Start a new business. Produce your own music. Plan for the big day. The possibilities are endless. See how it’s done in these quick how‑to films. All designed, shot, and edited on iPad Pro."
    },
    {
-      "id": 20,
+      "id": "20",
       "title": "Galaxy S10+",
       "img": "img/s10.png",
       "price": 999,
@@ -160,7 +160,7 @@
       "info": "A nearly frameless Cinematic Infinity Display for more detail and clarity, more immersive and uninterrupted content, in a slim, balanced form."
    },
    {
-      "id": 21,
+      "id": "21",
       "title": "AirPods Pro",
       "img": "img/airpods.png",
       "price": 249,
