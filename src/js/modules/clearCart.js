@@ -1,10 +1,10 @@
-import setCartValues from "./setCartValues";
+import setCartValues from './setCartValues';
 
-const clearCart = cart => {
+const clearCart = (cart, buttons) => {
    const cartProductList = document.querySelector('.cart__products__list');
-   const buttons = [...document.querySelectorAll('.button__btn--products-buy')];
+   const filterItemsButtons = [...document.querySelectorAll('.button__btn--products-buy')];
 
-   let cartItems = cart.map(item => item.id);
+   const cartItems = cart.map(item => item.id);
 
    cartItems.forEach(id => {
       cart = cart.filter(item => item.id !== id);
@@ -17,6 +17,11 @@ const clearCart = cart => {
    while (cartProductList.children.length > 0) {
       cartProductList.removeChild(cartProductList.children[0]);
    }
+
+   filterItemsButtons.forEach(button => {
+      button.disabled = false;
+      button.innerText = 'Buy';
+   })
 
    return cart;
 }

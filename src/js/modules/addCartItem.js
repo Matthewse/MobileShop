@@ -13,7 +13,7 @@ const addCartItem = product => {
                <li><p class="cart__item-plus">+</p></li>
             </ul>
          </div>
-         <span class="cart__remove-item">X</span>
+         <span class="cart__remove-item" data-id=${product.id}>X</span>
       </li>
       `;
 }

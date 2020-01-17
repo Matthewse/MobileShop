@@ -1,11 +1,12 @@
-import displayProducts from "./displayProducts";
-import search from "./search";
-import filter from "./filter";
-import showCart from "./showCart";
-import hideCart from "./hideCart";
+import displayProducts from './displayProducts';
+import search from './search';
+import filter from './filter';
+import showCart from './showCart';
+import hideCart from './hideCart';
 import addCartItem from './addCartItem';
 import setCartValues from './setCartValues';
 import clearCart from './clearCart';
+import removeProduct from './removeProduct';
 
 const app = products => {
    const searchInput = document.querySelector('.search');
@@ -13,6 +14,9 @@ const app = products => {
    const cartButton = document.querySelector('.cart-button');
    const closeCartElements = document.querySelectorAll('.cart__close, .cart__overlay');
    const clearCartButton = document.querySelector('.button__btn--clear-cart');
+   const productsList = document.querySelector('.products__list');
+   const buttons = [...document.querySelectorAll('.button__btn--products-buy')];
+   const cartProductsList = document.querySelector('.cart__products__list');
 
    let term = '';
    let brand = 'All';
@@ -20,7 +24,6 @@ const app = products => {
 
    const getBuyButtons = () => {
       const buttons = [...document.querySelectorAll('.button__btn--products-buy')];
-
       buttons.forEach(button => {
          const id = button.dataset.id;
          const inCart = cart.find(product => product.id === id);
@@ -46,6 +49,12 @@ const app = products => {
    searchInput.addEventListener('keyup', event => {
       term = event.target.value.trim();
       const searchProducts = search(filter(products, brand), term);
+      if (searchProducts.length === 0) {
+         const products = [...productsList.children];
+         products.forEach(product => {
+            product.style.display = 'none';
+         });
+      }
       displayProducts(searchProducts);
       getBuyButtons();
    });
@@ -68,8 +77,19 @@ const app = products => {
    });
 
    clearCartButton.addEventListener('click', () => {
-      cart = clearCart(cart);
+      cart = clearCart(cart, buttons);
    });
+
+   cartProductsList.addEventListener('click', event => {
+      if (event.target.classList.contains('cart__remove-item')) {
+         const removeItem = event.target;
+         const id = removeItem.dataset.id;
+         if (removeItem.parentNode.parentNode) {
+            removeItem.parentNode.parentNode.removeChild(removeItem.parentNode);
+         }
+         cart = removeProduct(id, cart, buttons);
+      }
+   })
 
    getBuyButtons();
 }
