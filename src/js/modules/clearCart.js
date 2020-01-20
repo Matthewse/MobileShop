@@ -1,6 +1,6 @@
 import setCartValues from './setCartValues';
 
-const clearCart = (cart, buttons) => {
+const clearCart = cart => {
    const cartProductList = document.querySelector('.cart__products__list');
    const filterItemsButtons = [...document.querySelectorAll('.button__btn--products-buy')];
 
@@ -9,9 +9,6 @@ const clearCart = (cart, buttons) => {
    cartItems.forEach(id => {
       cart = cart.filter(item => item.id !== id);
       setCartValues(cart);
-      const button = buttons.find(button => button.dataset.id === id);
-      button.disabled = false;
-      button.innerText = 'Buy';
    });
 
    while (cartProductList.children.length > 0) {

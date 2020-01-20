@@ -15,15 +15,16 @@ const app = products => {
    const closeCartElements = document.querySelectorAll('.cart__close, .cart__overlay');
    const clearCartButton = document.querySelector('.button__btn--clear-cart');
    const productsList = document.querySelector('.products__list');
-   const buttons = [...document.querySelectorAll('.button__btn--products-buy')];
    const cartProductsList = document.querySelector('.cart__products__list');
 
    let term = '';
    let brand = 'All';
    let cart = [];
+   let buttonsDOM = [];
 
    const getBuyButtons = () => {
       const buttons = [...document.querySelectorAll('.button__btn--products-buy')];
+      buttonsDOM = buttons;
       buttons.forEach(button => {
          const id = button.dataset.id;
          const inCart = cart.find(product => product.id === id);
@@ -77,7 +78,7 @@ const app = products => {
    });
 
    clearCartButton.addEventListener('click', () => {
-      cart = clearCart(cart, buttons);
+      cart = clearCart(cart, buttonsDOM);
    });
 
    cartProductsList.addEventListener('click', event => {
@@ -87,7 +88,27 @@ const app = products => {
          if (removeItem.parentNode.parentNode) {
             removeItem.parentNode.parentNode.removeChild(removeItem.parentNode);
          }
-         cart = removeProduct(id, cart, buttons);
+         cart = removeProduct(id, cart, buttonsDOM);
+      } else if (event.target.classList.contains('cart__item-plus')) {
+         const addAmount = event.target;
+         const id = addAmount.dataset.id;
+         const tempItem = cart.find(item => item.id === id);
+         tempItem.amount = tempItem.amount + 1;
+         setCartValues(cart);
+         addAmount.previousElementSibling.innerText = tempItem.amount;
+      } else if (event.target.classList.contains('cart__item-minus')) {
+         const lowerAmount = event.target;
+         const id = lowerAmount.dataset.id;
+         const tempItem = cart.find(item => item.id === id);
+         tempItem.amount = tempItem.amount - 1;
+         setCartValues(cart);
+         lowerAmount.nextElementSibling.innerText = tempItem.amount;
+         if (tempItem.amount > 0) {
+            setCartValues(cart);
+         } else {
+            cartProductsList.removeChild(lowerAmount.parentNode.parentNode.parentNode);
+            removeProduct(id, cart, buttonsDOM);
+         }
       }
    })
 
