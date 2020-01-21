@@ -1,9 +1,7 @@
 const getProducts = () => {
    return fetch('../assets/data/data.json')
       .then(response => response.json())
-      .then(products => {
-         return products;
-      })
+      .then(products => products)
       .catch((err) => {
          console.log('Error: ', err);
       })
