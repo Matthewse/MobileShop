@@ -7,12 +7,14 @@ import addCartItem from './addCartItem';
 import setCartValues from './setCartValues';
 import clearCart from './clearCart';
 import removeProduct from './removeProduct';
+import checkCart from './checkCart';
+import checkProductsList from './checkProductsList';
 
 const app = products => {
    const searchInput = document.querySelector('.search');
    const companies = document.querySelectorAll('.brand-filter__company');
    const cartButton = document.querySelector('.cart-button');
-   const closeCartElements = document.querySelectorAll('.cart__close, .cart__overlay');
+   const closeCartElements = document.querySelectorAll('.cart__close, .cart__backdrop');
    const clearCartButton = document.querySelector('.button__btn--clear-cart');
    const productsList = document.querySelector('.products__list');
    const cartProductsList = document.querySelector('.cart__products__list');
@@ -25,6 +27,7 @@ const app = products => {
    const getBuyButtons = () => {
       const buttons = [...document.querySelectorAll('.button__btn--products-buy')];
       buttonsDOM = buttons;
+      checkCart(cart);
       buttons.forEach(button => {
          const id = button.dataset.id;
          const inCart = cart.find(product => product.id === id);
@@ -43,6 +46,7 @@ const app = products => {
             cart = [...cart, cartProduct];
             addCartItem(cartProduct);
             setCartValues(cart);
+            checkCart(cart);
          });
       });
    }
@@ -51,12 +55,12 @@ const app = products => {
       term = event.target.value.trim();
       const searchProducts = search(filter(products, brand), term);
       if (searchProducts.length === 0) {
-         const products = [...productsList.children];
-         products.forEach(product => {
-            product.style.display = 'none';
-         });
+         while (productsList.firstChild) {
+            productsList.removeChild(productsList.firstChild);
+         }
       }
       displayProducts(searchProducts);
+      checkProductsList()
       getBuyButtons();
    });
 
@@ -79,6 +83,7 @@ const app = products => {
 
    clearCartButton.addEventListener('click', () => {
       cart = clearCart(cart, buttonsDOM);
+      checkCart(cart);
    });
 
    cartProductsList.addEventListener('click', event => {
@@ -89,6 +94,7 @@ const app = products => {
             removeItem.parentNode.parentNode.removeChild(removeItem.parentNode);
          }
          cart = removeProduct(id, cart, buttonsDOM);
+         checkCart(cart);
       } else if (event.target.classList.contains('cart__item-plus')) {
          const addAmount = event.target;
          const id = addAmount.dataset.id;
@@ -107,7 +113,8 @@ const app = products => {
             setCartValues(cart);
          } else {
             cartProductsList.removeChild(lowerAmount.parentNode.parentNode.parentNode);
-            removeProduct(id, cart, buttonsDOM);
+            cart = removeProduct(id, cart, buttonsDOM);
+            checkCart(cart);
          }
       }
    })
