@@ -10,23 +10,35 @@
 }
 
 .products__list {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   box-sizing: border-box;
+   display: flex;
+   flex-wrap: wrap;
 }
 
 .products__item {
+   width: 30%;
+   margin: 5px 5px;
    padding: 20px 10px;
    text-align: center;
-   transition: 0.2s;
+   border-radius: 10px;
+   background-color: rgb(255, 255, 255);
+   transition: all 0.3s;
 
    &:hover {
-      box-shadow: 0px 0px 10px grey;
+      box-shadow: 0px 0px 10px 0px rgba(194, 194, 194, 1);
+
+      .products__image {
+         display: flex;
+         margin: 0 auto;
+         transform: scale(1.04);
+      }
    }
 }
 
 .products__image {
    display: flex;
    margin: 0 auto;
+   transition: all 0.3s;
 }
 
 .products__description {

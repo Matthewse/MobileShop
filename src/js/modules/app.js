@@ -17,7 +17,7 @@ const app = products => {
    const closeCartElements = document.querySelectorAll('.cart__close, .cart__backdrop');
    const clearCartButton = document.querySelector('.button__btn--clear-cart');
    const productsList = document.querySelector('.products__list');
-   const cartProductsList = document.querySelector('.cart__products__list');
+   const cartProductsList = document.querySelector('.cart__products-list');
 
    let term = '';
    let brand = 'All';
@@ -88,31 +88,40 @@ const app = products => {
 
    cartProductsList.addEventListener('click', event => {
       if (event.target.classList.contains('cart__remove-item')) {
-         const removeItem = event.target;
+         const removeItem = event.target;         
          const id = removeItem.dataset.id;
-         if (removeItem.parentNode.parentNode) {
-            removeItem.parentNode.parentNode.removeChild(removeItem.parentNode);
+         const removeNode = removeItem.closest('.cart__item');
+         
+         if (cartProductsList) {
+            cartProductsList.removeChild(removeNode);
          }
          cart = removeProduct(id, cart, buttonsDOM);
          checkCart(cart);
+
       } else if (event.target.classList.contains('cart__item-plus')) {
          const addAmount = event.target;
          const id = addAmount.dataset.id;
          const tempItem = cart.find(item => item.id === id);
+
          tempItem.amount = tempItem.amount + 1;
          setCartValues(cart);
          addAmount.previousElementSibling.innerText = tempItem.amount;
+
       } else if (event.target.classList.contains('cart__item-minus')) {
          const lowerAmount = event.target;
          const id = lowerAmount.dataset.id;
          const tempItem = cart.find(item => item.id === id);
+
          tempItem.amount = tempItem.amount - 1;
          setCartValues(cart);
          lowerAmount.nextElementSibling.innerText = tempItem.amount;
+
          if (tempItem.amount > 0) {
             setCartValues(cart);
          } else {
-            cartProductsList.removeChild(lowerAmount.parentNode.parentNode.parentNode);
+            const removeNode = lowerAmount.closest('.cart__item');
+
+            cartProductsList.removeChild(removeNode);
             cart = removeProduct(id, cart, buttonsDOM);
             checkCart(cart);
          }

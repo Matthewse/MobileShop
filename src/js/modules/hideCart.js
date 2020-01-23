@@ -1,8 +1,8 @@
 const hideCart = () => {
-   const cartOverlay = document.querySelector('.cart__overlay');
+   const cartBackdrop = document.querySelector('.cart__backdrop');
    const productsCart = document.querySelector('.cart__products-cart');
 
-   cartOverlay.classList.remove('cart__transparentBackground');
+   cartBackdrop.classList.remove('cart__transparentBackground');
    productsCart.classList.remove('cart__showCart');
 }
 

@@ -9,19 +9,19 @@
    },
    {
       "id": "2",
-      "title": "Huawei FreeBuds 3",
-      "img": "img/freebuds3.png",
-      "price": 199,
-      "company": "Huawei",
-      "info": "More than an epic to listen to, the all new HUAWEI FreeBuds 3 is amazing to look at. Inspired by nature, the symmetrically round charging case is a feast for the eyes, and compact to hold or keep in the pocket, bag or anywhere."
+      "title": "Galaxy Fold",
+      "img": "img/fold.png",
+      "price": 1980,
+      "company": "Samsung",
+      "info": "Unfold to the most expansive Infinity Display ever. Create and collaborate with three apps on one screen."
    },
    {
       "id": "3",
-      "title": "Xiaomi Mi True Wireless",
-      "img": "img/airdots.png",
-      "price": 59,
-      "company": "Xiaomi",
-      "info": "Mi True Wireless Earphones use a completely wire-free design that unbinds left from right, creating an all new, completely liberated experience when you listen.As small as these earphones are, they pack a sound you'll have to hear to believe."
+      "title": "iPad Pro",
+      "img": "img/ipad.png",
+      "price": 999,
+      "company": "Apple",
+      "info": "Whatever you love to do, on iPad you can do it in ways that are incredibly simple and magical. Start a new business. Produce your own music. Plan for the big day. The possibilities are endless. See how it’s done in these quick how‑to films. All designed, shot, and edited on iPad Pro."
    },
    {
       "id": "4",
@@ -57,11 +57,11 @@
    },
    {
       "id": "8",
-      "title": "Galaxy Fold",
-      "img": "img/fold.png",
-      "price": 1980,
-      "company": "Samsung",
-      "info": "Unfold to the most expansive Infinity Display ever. Create and collaborate with three apps on one screen."
+      "title": "Huawei FreeBuds 3",
+      "img": "img/freebuds3.png",
+      "price": 199,
+      "company": "Huawei",
+      "info": "More than an epic to listen to, the all new HUAWEI FreeBuds 3 is amazing to look at. Inspired by nature, the symmetrically round charging case is a feast for the eyes, and compact to hold or keep in the pocket, bag or anywhere."
    },
    {
       "id": "9",
@@ -145,11 +145,11 @@
    },
    {
       "id": "19",
-      "title": "iPad Pro",
-      "img": "img/ipad.png",
-      "price": 999,
-      "company": "Apple",
-      "info": "Whatever you love to do, on iPad you can do it in ways that are incredibly simple and magical. Start a new business. Produce your own music. Plan for the big day. The possibilities are endless. See how it’s done in these quick how‑to films. All designed, shot, and edited on iPad Pro."
+      "title": "Xiaomi Mi True Wireless",
+      "img": "img/airdots.png",
+      "price": 59,
+      "company": "Xiaomi",
+      "info": "Mi True Wireless Earphones use a completely wire-free design that unbinds left from right, creating an all new, completely liberated experience when you listen.As small as these earphones are, they pack a sound you'll have to hear to believe."
    },
    {
       "id": "20",

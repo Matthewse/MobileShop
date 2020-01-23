@@ -1,7 +1,7 @@
 import setCartValues from './setCartValues';
 
 const clearCart = cart => {
-   const cartProductList = document.querySelector('.cart__products__list');
+   const cartProductList = document.querySelector('.cart__products-list');
    const filterItemsButtons = [...document.querySelectorAll('.button__btn--products-buy')];
 
    const cartItems = cart.map(item => item.id);

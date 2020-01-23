@@ -29,74 +29,76 @@
    </header>
 
    <main class="page-main">
-      <section class="filters">
-         <div class="filters__wrapper">
-            <div class="search">
-               <input class="search__text" type="text" placeholder="Search">
+      <div class="main-wrapper">
+         <section class="filters">
+            <div class="filters__wrapper">
+               <div class="search">
+                  <input class="search__text" type="text" placeholder="Search">
+               </div>
+               <div class="brand-filter">
+                  <ul class="brand-filter__list">
+                     <li class="brand-filter__item">
+                        <a class="brand-filter__company" data-company="All">
+                           <span>All</span>
+                        </a>
+                     </li>
+                     <li class="brand-filter__item">
+                        <a class="brand-filter__company" data-company="Apple">
+                           <img src="assets/img/apple.png" width="60" height="60" alt="apple">
+                        </a>
+                     </li>
+                     <li class="brand-filter__item">
+                        <a class="brand-filter__company" data-company="Xiaomi">
+                           <img src="assets/img/xiaomi.png" width="60" height="60" alt="xiaomi">
+                        </a>
+                     </li>
+                     <li class="brand-filter__item">
+                        <a class="brand-filter__company" data-company="Samsung">
+                           <img src="assets/img/samsung.png" width="60" height="60" alt="samsung">
+                        </a>
+                     </li>
+                     <li class="brand-filter__item">
+                        <a class="brand-filter__company" data-company="Google">
+                           <img src="assets/img/google.png" width="60" height="60" alt="google">
+                        </a>
+                     </li>
+                     <li class="brand-filter__item">
+                        <a class="brand-filter__company" data-company="Huawei">
+                           <img src="assets/img/huawei.png" width="60" height="60" alt="huawei">
+                        </a>
+                     </li>
+                     <li class="brand-filter__item">
+                        <a class="brand-filter__company" data-company="Microsoft">
+                           <img src="assets/img/microsoft.png" width="60" height="60" alt="microsoft">
+                        </a>
+                     </li>
+                  </ul>
+               </div>
             </div>
-            <div class="brand-filter">
-               <ul class="brand-filter__list">
-                  <li class="brand-filter__item">
-                     <a class="brand-filter__company" data-company="All">
-                        <span>All</span>
-                     </a>
-                  </li>
-                  <li class="brand-filter__item">
-                     <a class="brand-filter__company" data-company="Apple">
-                        <img src="assets/img/apple.png" width="60" height="60" alt="apple">
-                     </a>
-                  </li>
-                  <li class="brand-filter__item">
-                     <a class="brand-filter__company" data-company="Xiaomi">
-                        <img src="assets/img/xiaomi.png" width="60" height="60" alt="xiaomi">
-                     </a>
-                  </li>
-                  <li class="brand-filter__item">
-                     <a class="brand-filter__company" data-company="Samsung">
-                        <img src="assets/img/samsung.png" width="60" height="60" alt="samsung">
-                     </a>
-                  </li>
-                  <li class="brand-filter__item">
-                     <a class="brand-filter__company" data-company="Google">
-                        <img src="assets/img/google.png" width="60" height="60" alt="google">
-                     </a>
-                  </li>
-                  <li class="brand-filter__item">
-                     <a class="brand-filter__company" data-company="Huawei">
-                        <img src="assets/img/huawei.png" width="60" height="60" alt="huawei">
-                     </a>
-                  </li>
-                  <li class="brand-filter__item">
-                     <a class="brand-filter__company" data-company="Microsoft">
-                        <img src="assets/img/microsoft.png" width="60" height="60" alt="microsoft">
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </section>
+         </section>
 
-      <section class="products">
-         <div class="products__wrapper">
-            <div class="products__main-title">
-               <h1>Products</h1>
+         <section class="products">
+            <div class="products__wrapper">
+               <div class="products__main-title">
+                  <h1>Products</h1>
+               </div>
+               <ul class="products__list"></ul>
             </div>
-            <ul class="products__list"></ul>
-         </div>
-      </section>
+         </section>
 
-      <section class="cart">
-         <div class="cart__backdrop"></div>
-         <div class="cart__products-cart">
-            <span class="cart__close">X</span>
-            <h2 class="cart__title"></h2>
-            <ul class="cart__products__list"></ul>
-            <div class="cart__footer">
-               <h3>Total: $ <span class="cart__total">0</span></h3>
-               <button class="button__btn button__btn--clear-cart">Сlear cart</button>
+         <section class="cart">
+            <div class="cart__backdrop"></div>
+            <div class="cart__products-cart">
+               <span class="cart__close">X</span>
+               <h2 class="cart__title"></h2>
+               <ul class="cart__products-list"></ul>
+               <div class="cart__footer">
+                  <h3>Total: $ <span class="cart__total">0</span></h3>
+                  <button class="button__btn button__btn--clear-cart">Сlear cart</button>
+               </div>
             </div>
-         </div>
-      </section>
+         </section>
+      </div>
    </main>
    <script src="assets/js/app.js"></script>
 </body>
