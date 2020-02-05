@@ -45,3 +45,39 @@
    margin-top: 15px;
    text-align: center;
 }
+
+@media (max-width: 1024px) {
+
+   .products__wrapper {
+      max-width: 690px;
+   }
+
+   .products__list {
+      justify-content: space-between;
+   }
+
+   .products__item {
+      width: 40%;
+      margin: 10px 10px;
+
+      &:last-child {
+         margin-right: auto;
+      }
+   }
+}
+
+@media (max-width: 640px) {
+
+   .products__list {
+      justify-content: center;
+   }
+
+   .products__item {
+      width: 75%;
+      margin: 10px 10px;
+
+      &:last-child {
+         margin: auto;
+      }
+   }
+}

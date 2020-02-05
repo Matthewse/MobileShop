@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "My template",
   "main": "index.js",
+  "homepage": "https://Matthewse.github.io/mobileShop",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./config/webpack.dev.conf.js",
-    "build": "webpack --config ./config/webpack.build.conf.js"
+    "build": "webpack --config ./config/webpack.build.conf.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "> 1%",
@@ -34,5 +37,8 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "gh-pages": "^2.2.0"
   }
 }

@@ -1,6 +1,2 @@
-.idea
-*.log
 node_modules/
-dist/
-Thumbs.db
-package-lock.json
+build/
