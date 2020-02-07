@@ -1,5 +1,5 @@
 const getProducts = () => {
-   return fetch('../assets/data/data.json')
+   return fetch('./assets/data/data.json')
       .then(response => response.json())
       .then(products => products)
       .catch((err) => {
