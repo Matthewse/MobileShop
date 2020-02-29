@@ -50,7 +50,7 @@ module.exports = {
                options: { sourceMap: true }
             }, {
                loader: 'postcss-loader',
-               options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+               options: { sourceMap: true, config: { path: `config/postcss.config.js` } }
             }, {
                loader: 'sass-loader',
                options: { sourceMap: true }
@@ -66,7 +66,7 @@ module.exports = {
                options: { sourceMap: true }
             }, {
                loader: 'postcss-loader',
-               options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+               options: { sourceMap: true, config: { path: `config/postcss.config.js` } }
             },
          ]
       }]

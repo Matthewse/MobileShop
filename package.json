@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "https://Matthewse.github.io/mobileShop",
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./config/webpack.dev.conf.js",
+    "start": "webpack-dev-server --open --config ./config/webpack.dev.conf.js",
     "build": "webpack --config ./config/webpack.build.conf.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
