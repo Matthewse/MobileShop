@@ -9,6 +9,9 @@ import clearCart from './clearCart';
 import removeProduct from './removeProduct';
 import checkCart from './checkCart';
 import checkProductsList from './checkProductsList';
+import addModalItem from './addModalItem';
+import showModal from './showModal';
+import hideModal from './hideModal';
 
 const app = products => {
    const searchInput = document.querySelector('.search');
@@ -62,6 +65,7 @@ const app = products => {
       displayProducts(searchProducts);
       checkProductsList()
       getBuyButtons();
+      getImages();
    });
 
    companies.forEach(company => {
@@ -70,6 +74,7 @@ const app = products => {
          const filterProducts = filter(search(products, term), brand);
          displayProducts(filterProducts);
          getBuyButtons();
+         getImages();
       });
    });
 
@@ -88,10 +93,10 @@ const app = products => {
 
    cartProductsList.addEventListener('click', event => {
       if (event.target.classList.contains('cart__remove-item')) {
-         const removeItem = event.target;         
+         const removeItem = event.target;
          const id = removeItem.dataset.id;
          const removeNode = removeItem.closest('.cart__item');
-         
+
          if (cartProductsList) {
             cartProductsList.removeChild(removeNode);
          }
@@ -126,9 +131,34 @@ const app = products => {
             checkCart(cart);
          }
       }
-   })
+   });
+
+   const getImages = () => {
+      const productsImgElements = document.querySelectorAll('.products__image');
+
+      productsImgElements.forEach(image => {
+         image.addEventListener('click', () => {
+            const id = image.nextElementSibling.nextElementSibling.dataset.id;
+            const product = products.find(product => product.id === id);
+            addModalItem(product);
+            showModal();
+            getCloseElements();
+         });
+      });
+   }
+
+   const getCloseElements = () => {
+      const closeModalElements = document.querySelectorAll('.modal__close, .modal__backdrop');
+      
+      closeModalElements.forEach(closeModal => {
+         closeModal.addEventListener('click', () => {
+            hideModal();
+         });
+      });
+   }
 
    getBuyButtons();
+   getImages();
 }
 
 export default app;

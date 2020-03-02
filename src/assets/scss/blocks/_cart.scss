@@ -7,7 +7,7 @@
    background: rgba(0, 0, 0, 0.6);
    z-index: 2;
    visibility: hidden;
-   transition: all opacity 0.3s, visibility 0s linear 0.3s;
+   transition: all 0.3s ease;
    opacity: 0;
 }
 

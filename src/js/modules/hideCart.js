@@ -4,6 +4,7 @@ const hideCart = () => {
 
    cartBackdrop.classList.remove('cart__transparentBackground');
    productsCart.classList.remove('cart__showCart');
+   document.body.style.overflowY = 'auto';
 }
 
 export default hideCart;

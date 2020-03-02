@@ -1,5 +1,6 @@
 const addModalItem = product => {
    const modalProduct = document.querySelector('.modal__product-modal');
+   modalProduct.innerHTML = '';
 
    modalProduct.innerHTML += `
       <span class="modal__close">X</span>
