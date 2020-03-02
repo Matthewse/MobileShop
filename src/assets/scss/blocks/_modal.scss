@@ -34,14 +34,14 @@
    visibility: visible;
    opacity: 1;
    transform: scale(1);
-   transition: all 0.5s ease;
+   transition: all 0.3s ease;
 }
 
 .modal__transparentBackground {
    opacity: 1;
    visibility: visible;
    transition-delay: 0s;
-   transition: all 0.5s ease;
+   transition: all 0.3s ease;
 }
 
 .modal__close {

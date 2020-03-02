@@ -21,6 +21,7 @@ const app = products => {
    const clearCartButton = document.querySelector('.button__btn--clear-cart');
    const productsList = document.querySelector('.products__list');
    const cartProductsList = document.querySelector('.cart__products-list');
+   const filterItems = document.querySelectorAll('.brand-filter__item');
 
    let term = '';
    let brand = 'All';
@@ -66,6 +67,7 @@ const app = products => {
       checkProductsList()
       getBuyButtons();
       getImages();
+      getActiveFilterItem();
    });
 
    companies.forEach(company => {
@@ -75,6 +77,7 @@ const app = products => {
          displayProducts(filterProducts);
          getBuyButtons();
          getImages();
+         getActiveFilterItem();
       });
    });
 
@@ -149,7 +152,7 @@ const app = products => {
 
    const getCloseElements = () => {
       const closeModalElements = document.querySelectorAll('.modal__close, .modal__backdrop');
-      
+
       closeModalElements.forEach(closeModal => {
          closeModal.addEventListener('click', () => {
             hideModal();
@@ -157,8 +160,21 @@ const app = products => {
       });
    }
 
+   const getActiveFilterItem = () => {
+      filterItems.forEach(item => {
+         item.addEventListener('click', () => {
+            filterItems.forEach(item => {
+               item.classList.remove('brand-filter__item--active');
+            });
+
+            item.classList.add('brand-filter__item--active');
+         });
+      });
+   }
+
    getBuyButtons();
    getImages();
+   getActiveFilterItem();
 }
 
 export default app;
